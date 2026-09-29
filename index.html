@@ -447,6 +447,48 @@ img,video,svg{max-width:100%}
 }
 </style>
 
+
+
+
+
+
+<style id="intro-mobile-text-first">
+@media (max-width:640px){
+  #intro .grid2{
+    display:flex!important;
+    flex-direction:column!important;
+  }
+
+  /* Text/content first */
+  #intro .grid2 > :not(.hero-player){
+    order:0!important;
+  }
+
+  /* Program cover after the intro text */
+  #intro .grid2 > .hero-player{
+    order:10!important;
+    width:100%!important;
+    max-width:100%!important;
+    margin:24px 0 0!important;
+  }
+
+  /* No overlay label on mobile */
+  #intro .hero-player .player-badge,
+  #intro .hero-player [class*="badge"]{
+    display:none!important;
+    visibility:hidden!important;
+    opacity:0!important;
+  }
+
+  #intro .hero-player img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    object-fit:cover!important;
+  }
+}
+</style>
+
 </head><body>
 <header class="top"><div class="wrap nav"><div class="logo"><span class="fb">Fb</span>الفبال</div>
 <nav class="navlinks" aria-label="ناوبری مدیاکیت">
